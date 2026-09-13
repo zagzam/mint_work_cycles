@@ -1,0 +1,149 @@
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>민트비 업무 처리 표준</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#f5f5f5; --paper2:#ececec; --ink:#2d3142; --muted:#4f5d75; --soft:#7a8399; --accent:#eb6c36; --tint:rgba(235,108,54,.08); --rule:rgba(45,49,66,.12); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:'Geist','Noto Sans KR','Malgun Gothic',sans-serif; }
+    main { width:1200px; margin:0 auto; padding:48px 0 64px; }
+    .eyebrow { margin:0 0 8px; color:var(--muted); font:500 12px 'Geist Mono',monospace; letter-spacing:.12em; }
+    h1 { margin:0; font:400 40px/1.1 'Instrument Serif','Noto Serif KR',serif; letter-spacing:-.02em; }
+    .intro { margin:12px 0 40px; color:var(--muted); font-size:16px; }
+    section { padding:32px 0; border-top:1px solid var(--rule); }
+    h2 { margin:0 0 8px; font-size:24px; }
+    .note { margin:0 0 20px; color:var(--muted); font-size:14px; }
+    svg { display:block; width:100%; background:var(--paper); }
+    .step { fill:#fff; stroke:var(--ink); stroke-width:1; }
+    .focus { fill:var(--tint); stroke:var(--accent); stroke-width:1.2; }
+    .muted { fill:var(--paper2); stroke:#bfc0c0; stroke-width:1; }
+    .ink { fill:var(--ink); }
+    .label { fill:var(--ink); font-size:16px; font-weight:600; text-anchor:middle; }
+    .sub { fill:var(--muted); font-size:12px; text-anchor:middle; }
+    .tag { fill:var(--muted); font:500 12px 'Geist Mono',monospace; letter-spacing:.08em; }
+    .arrow { fill:none; stroke:var(--muted); stroke-width:1.2; marker-end:url(#arrow); }
+    .accent-arrow { fill:none; stroke:var(--accent); stroke-width:1.2; marker-end:url(#arrow-accent); }
+    .dash { fill:none; stroke:var(--soft); stroke-width:1.2; stroke-dasharray:5,4; marker-end:url(#arrow-soft); }
+    footer { margin-top:8px; padding-top:20px; border-top:1px solid var(--rule); color:var(--muted); font:12px 'Geist Mono',monospace; letter-spacing:.08em; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">MINTBEE · STANDARD OPERATING CYCLES</p>
+    <h1>만들기 전에 검토하고, 출시 후 검증하며, 성과로 완성하는 절차</h1>
+    <p class="intro">기능 개발부터 서비스 안착, 자동화 관리, 전사 표준까지 — 업무를 다음 단계로 넘기기 전에 확인해야 할 다섯 가지 사이클</p>
+
+    <section>
+      <h2>1. 신규 기능 개발 전 검토</h2>
+      <p class="note">새 기능은 마지막 선택지입니다. 기존 자산을 먼저 정리·통합·개선한 뒤에만 신규 개발로 판단합니다.</p>
+      <svg viewBox="0 0 1200 200" role="img" aria-labelledby="pre-review-title pre-review-desc">
+        <title id="pre-review-title">신규 기능 개발 전 우선순위 검토</title><desc id="pre-review-desc">기존 기능 삭제, 중복 기능 통합, 메뉴 재배치, 기존 기능 개선을 차례로 검토한 후 신규 개발을 선택하는 흐름.</desc>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"></polygon></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#eb6c36"></polygon></marker><marker id="arrow-soft" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7a8399"></polygon></marker></defs>
+        <text x="24" y="32" class="tag">PRIORITY ORDER</text>
+        <path d="M224 104H248 M440 104H464 M656 104H680 M872 104H896" class="arrow"></path>
+        <rect x="24" y="64" width="200" height="80" rx="8" class="step"></rect><text x="124" y="100" class="label">기존 기능 삭제</text><text x="124" y="124" class="sub">불필요한 복잡성 제거</text>
+        <rect x="248" y="64" width="192" height="80" rx="8" class="step"></rect><text x="344" y="100" class="label">중복 기능 통합</text><text x="344" y="124" class="sub">경험과 유지보수 단순화</text>
+        <rect x="464" y="64" width="192" height="80" rx="8" class="step"></rect><text x="560" y="100" class="label">메뉴 재배치</text><text x="560" y="124" class="sub">발견성과 접근성 개선</text>
+        <rect x="680" y="64" width="192" height="80" rx="8" class="step"></rect><text x="776" y="100" class="label">기존 기능 개선</text><text x="776" y="124" class="sub">이미 있는 가치 강화</text>
+        <rect x="896" y="64" width="280" height="80" rx="8" class="focus"></rect><text x="1036" y="100" class="label" fill="#eb6c36">신규 개발</text><text x="1036" y="124" class="sub">앞선 선택지가 모두 부족할 때</text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>2. 핵심 신규 기능 상용화 직후의 1차 검증</h2>
+      <p class="note">출시는 완료가 아니라 현장 검증의 시작입니다. 3~7일의 직접 사용과 수정·안정화가 끝나야 업무 1차 완료입니다.</p>
+      <svg viewBox="0 0 1200 220" role="img" aria-labelledby="launch-check-title launch-check-desc">
+        <title id="launch-check-title">핵심 신규 기능의 1차 검증 절차</title><desc id="launch-check-desc">출시 후 관련 임직원이 3일에서 7일간 직접 사용하고 발견 문제를 수정해 안정화해야 1차 업무가 완료되는 흐름.</desc>
+        <defs><marker id="arrow2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"></polygon></marker><marker id="arrow2-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#eb6c36"></polygon></marker></defs>
+        <path d="M248 108H288 M512 108H552 M776 108H816" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow2)"></path>
+        <rect x="48" y="68" width="200" height="80" rx="20" class="step"></rect><text x="148" y="104" class="label">출시</text><text x="148" y="128" class="sub">상용 환경 배포</text>
+        <rect x="288" y="68" width="224" height="80" rx="8" class="focus"></rect><text x="400" y="100" class="label" fill="#eb6c36">관련 임직원 직접 사용</text><text x="400" y="124" class="sub">3~7일 · 실제 업무로 확인</text>
+        <rect x="552" y="68" width="224" height="80" rx="8" class="step"></rect><text x="664" y="104" class="label">발견된 문제 수정</text><text x="664" y="128" class="sub">사용 맥락의 결함 해소</text>
+        <rect x="816" y="68" width="192" height="80" rx="20" class="ink"></rect><text x="912" y="104" fill="#f5f5f5" font-size="16" font-weight="600" text-anchor="middle">안정화</text><text x="912" y="128" fill="#bfc0c0" font-size="12" text-anchor="middle">업무 1차 완료</text>
+        <text x="48" y="188" class="tag">RELEASE ≠ COMPLETE</text><text x="248" y="188" class="sub" text-anchor="start">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; 직접 사용으로 확인된 안정성이 완료 기준입니다.</text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>3. 신규 기능을 완전히 안착시키고 키우는 서비스 오너 사이클</h2>
+      <p class="note">서비스를 키우기 전까지 다음 업무로 넘기지 않습니다. 이관은 성과평가와 안정화가 확인된 뒤의 마지막 단계입니다.</p>
+      <svg viewBox="0 0 1200 360" role="img" aria-labelledby="owner-cycle-title owner-cycle-desc">
+        <title id="owner-cycle-title">서비스 오너의 신규 기능 안착 사이클</title><desc id="owner-cycle-desc">기획부터 개발, 내부 테스트, 출시, 집중 사용, 데이터 확인, 개선, 1개월 성과평가, 안정화, 운영팀 이관까지 이어지는 서비스 오너 절차.</desc>
+        <defs><marker id="arrow3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"></polygon></marker><marker id="arrow3-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#eb6c36"></polygon></marker></defs>
+        <path d="M208 88H224" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M400 88H416" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M592 88H608" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M784 88H800" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M976 88H992" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M1168 88H1176Q1184 88 1184 96V248Q1184 256 1176 256H1016" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M840 256H800" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M624 256H584" class="arrow" marker-end="url(#arrow3)"></path>
+        <path d="M408 256H368" class="arrow" marker-end="url(#arrow3)"></path>
+        <rect x="32" y="48" width="176" height="80" rx="8" class="step"></rect><text x="120" y="88" class="label">기획</text>
+        <rect x="224" y="48" width="176" height="80" rx="8" class="step"></rect><text x="312" y="88" class="label">개발</text>
+        <rect x="416" y="48" width="176" height="80" rx="8" class="step"></rect><text x="504" y="88" class="label">내부 테스트</text>
+        <rect x="608" y="48" width="176" height="80" rx="8" class="step"></rect><text x="696" y="88" class="label">출시</text>
+        <rect x="800" y="48" width="176" height="80" rx="8" class="focus"></rect><text x="888" y="88" class="label" fill="#eb6c36">담당자 집중 사용</text>
+        <rect x="992" y="48" width="176" height="80" rx="8" class="step"></rect><text x="1080" y="80" class="label">회원 반응·</text><text x="1080" y="104" class="label">데이터 확인</text>
+        <rect x="840" y="216" width="176" height="80" rx="8" class="step"></rect><text x="928" y="256" class="label">개선</text>
+        <rect x="624" y="216" width="176" height="80" rx="8" class="focus"></rect><text x="712" y="248" class="label" fill="#eb6c36">1개월 성과평가</text><text x="712" y="272" class="sub">성장 가능성 확인</text>
+        <rect x="408" y="216" width="176" height="80" rx="8" class="step"></rect><text x="496" y="256" class="label">안정화</text>
+        <rect x="192" y="216" width="176" height="80" rx="20" class="ink"></rect><text x="280" y="256" fill="#f5f5f5" font-size="16" font-weight="600" text-anchor="middle">운영팀 이관</text>
+        <text x="32" y="336" class="tag">NEXT WORK BLOCKED UNTIL STABLE</text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>4. 단순 반복 업무의 자동화 관리</h2>
+      <p class="note">자동화는 방치가 아닙니다. 오류·데이터·예외를 지속적으로 확인해 다음 실행으로 되돌리는 관리 구조입니다.</p>
+      <svg viewBox="0 0 1200 260" role="img" aria-labelledby="automation-cycle-title automation-cycle-desc">
+        <title id="automation-cycle-title">단순 반복 업무 자동화의 관리 루프</title><desc id="automation-cycle-desc">자동 실행 뒤 오류 탐지, 정기 데이터 검증, 인간의 예외처리를 거쳐 다시 자동 실행으로 돌아가는 지속 검증 구조.</desc>
+        <defs><marker id="arrow4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"></polygon></marker><marker id="arrow4-soft" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7a8399"></polygon></marker></defs>
+        <path d="M320 112H392 M584 112H656 M848 112H920" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow4)"></path>
+        <path d="M1016 152V200Q1016 208 1008 208H208Q200 208 200 200V152" fill="none" stroke="#7a8399" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow4-soft)"></path>
+        <rect x="128" y="72" width="192" height="80" rx="8" class="focus"></rect><text x="224" y="112" class="label" fill="#eb6c36">자동 실행</text>
+        <rect x="392" y="72" width="192" height="80" rx="8" class="step"></rect><text x="488" y="112" class="label">오류 탐지</text>
+        <rect x="656" y="72" width="192" height="80" rx="8" class="step"></rect><text x="752" y="112" class="label">정기 데이터 검증</text>
+        <rect x="920" y="72" width="192" height="80" rx="8" class="step"></rect><text x="1016" y="112" class="label">인간의 예외처리</text>
+        <text x="608" y="236" class="sub">예외를 처리하고 검증 기준을 갱신한 뒤 다음 자동 실행으로 되돌립니다.</text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>5. 민트비 전체 표준 업무 사이클</h2>
+      <p class="note">문제의 원인과 KPI에서 시작해, 직원·회원의 실제 반응과 성과 기여를 확인한 다음에야 다음 일에 착수합니다.</p>
+      <svg viewBox="0 0 1200 400" role="img" aria-labelledby="standard-cycle-title standard-cycle-desc">
+        <title id="standard-cycle-title">민트비 전체 표준 업무 사이클</title><desc id="standard-cycle-desc">문제 발견부터 근본원인 확인, KPI 설정, 기획, 개발, 직접 사용, 출시, 회원 반응 확인, 개선, 성과 공유, 안정화, 다음 일 착수로 이어지는 전사 업무 표준.</desc>
+        <defs><marker id="arrow5" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"></polygon></marker><marker id="arrow5-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#eb6c36"></polygon></marker></defs>
+        <path d="M196 92H212" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M380 92H396" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M564 92H580" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M748 92H764" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M932 92H948" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M1116 92H1176Q1184 92 1184 100V268Q1184 276 1176 276H1176" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M1040 276H1016" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M832 276H808" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M640 276H616" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M448 276H424" class="arrow" marker-end="url(#arrow5)"></path>
+        <path d="M256 276H232" class="arrow" marker-end="url(#arrow5)"></path>
+        <rect x="28" y="52" width="168" height="80" rx="8" class="step"></rect><text x="112" y="92" class="label">문제 발견</text>
+        <rect x="212" y="52" width="168" height="80" rx="8" class="step"></rect><text x="296" y="80" class="label">근본원인</text><text x="296" y="104" class="label">확인</text>
+        <rect x="396" y="52" width="168" height="80" rx="8" class="focus"></rect><text x="480" y="80" class="label" fill="#eb6c36">목적·KPI</text><text x="480" y="104" class="label" fill="#eb6c36">설정</text>
+        <rect x="580" y="52" width="168" height="80" rx="8" class="step"></rect><text x="664" y="92" class="label">반응형 기획</text>
+        <rect x="764" y="52" width="168" height="80" rx="8" class="step"></rect><text x="848" y="92" class="label">개발</text>
+        <rect x="948" y="52" width="168" height="80" rx="8" class="focus"></rect><text x="1032" y="92" class="label" fill="#eb6c36">직원 직접 사용</text>
+        <rect x="1040" y="236" width="136" height="80" rx="8" class="step"></rect><text x="1108" y="276" class="label">출시</text>
+        <rect x="832" y="236" width="184" height="80" rx="8" class="step"></rect><text x="924" y="264" class="label">회원 데이터·</text><text x="924" y="288" class="label">반응 확인</text>
+        <rect x="640" y="236" width="168" height="80" rx="8" class="step"></rect><text x="724" y="276" class="label">개선</text>
+        <rect x="448" y="236" width="168" height="80" rx="8" class="step"></rect><text x="532" y="264" class="label">성과·기여</text><text x="532" y="288" class="label">공유</text>
+        <rect x="256" y="236" width="168" height="80" rx="8" class="step"></rect><text x="340" y="276" class="label">안정화</text>
+        <rect x="64" y="236" width="168" height="80" rx="20" class="ink"></rect><text x="148" y="276" fill="#f5f5f5" font-size="16" font-weight="600" text-anchor="middle">다음 일 착수</text>
+        <text x="28" y="364" class="tag">OBSERVE → DEFINE → BUILD → PROVE → STABILIZE → NEXT</text>
+      </svg>
+    </section>
+    <footer>MINTBEE WORK SYSTEM · 5 CONNECTED OPERATING CYCLES</footer>
+  </main>
+
+
+</body></html>
